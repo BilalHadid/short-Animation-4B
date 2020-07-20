@@ -69,7 +69,7 @@ const Line = styled.span`
 const Overlay = styled.div`
   position: absolute;
   height: ${(props) => (props.open ? "91vh" : 0)};
-  width: 100vw;
+  width: 100%;
   background: #1c2022;
   transition: height 0.4s ease-in-out;
 
@@ -109,17 +109,17 @@ export const Home = () => {
           <Menu>
             <Item>
               <Link target="#" href="https://www.instagram.com/igor_dumencic/">
-                Instagram
+                Home
               </Link>
             </Item>
             <Item>
               <Link target="#" href="https://www.behance.net/igordumencic">
-                Behance
+                Service
               </Link>
             </Item>
             <Item>
               <Link target="#" href="https://github.com/Igor178">
-                Github
+                Contact
               </Link>
             </Item>
           </Menu>
@@ -133,24 +133,32 @@ export const Home = () => {
           <OverlayMenu open={toggle}>
             <Item>
               <Link target="#" href="https://www.instagram.com/igor_dumencic/">
-                Instagram
+                Home
               </Link>
             </Item>
             <Item>
               <Link target="#" href="https://www.behance.net/igordumencic">
-                Behance
+                Service
               </Link>
             </Item>
             <Item>
               <Link target="#" href="https://github.com/Igor178">
-                Github
+                Contact
               </Link>
             </Item>
           </OverlayMenu>
         </Overlay>
       </div>
+      <div className="texto">
+        <h1 style={{ fontSize: "3vw" }}>
+          We deliver digital products & strategies that help you grow
+        </h1>
+        <button class="glow-on-hover" type="button">
+          Check out our work
+        </button>
+      </div>
       <div>
-        <h1>Hello World</h1>
+        <img src="./images/homeSet.svg" alt="G" />
       </div>
     </div>
   );
