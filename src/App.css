@@ -101,8 +101,19 @@ nav {
   margin-left: 15%;
 
   margin-top: 10%;
+  display: flex;
+  justify-content: center;
 }
-.texto h1 {
+@media only screen and (max-width: 600px) {
+  .texto {
+    height: 70vh;
+    width: 35%;
+    margin-left: 15%;
+
+    margin-top: 10%;
+  }
+}
+.texto1 h1 {
   text-align: left;
   font-size: bold;
   text-shadow: #2c2c2c 3px 3px 5px;
@@ -188,4 +199,26 @@ nav {
   100% {
     background-position: 0 0;
   }
+}
+.set {
+  position: absolute;
+  animation-name: example;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 16%;
+}
+@keyframes example {
+  from {
+    top: 30px;
+  }
+  to {
+    top: 0px;
+  }
+}
+.HomeSet {
+  width: 30%;
 }

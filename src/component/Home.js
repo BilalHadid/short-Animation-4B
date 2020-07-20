@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import avator from "../images/logo2.png";
 import "../App.css";
 import styled from "styled-components";
+import homeSet from "../images/homeSet.svg";
 
 const Nav = styled.nav`
   padding: 0 20px;
@@ -150,15 +151,18 @@ export const Home = () => {
         </Overlay>
       </div>
       <div className="texto">
-        <h1 style={{ fontSize: "3vw" }}>
-          We deliver digital products & strategies that help you grow
-        </h1>
-        <button class="glow-on-hover" type="button">
-          Check out our work
-        </button>
-      </div>
-      <div>
-        <img src="./images/homeSet.svg" alt="G" />
+        <div className="texto1">
+          <h1 style={{ fontSize: "3vw" }}>
+            We deliver digital products & strategies that help you grow
+          </h1>
+          <button className="glow-on-hover" type="button">
+            Check out our work
+          </button>
+        </div>
+
+        <div className="HomeSet">
+          <img className="set" src={homeSet} alt="G" />
+        </div>
       </div>
     </div>
   );
