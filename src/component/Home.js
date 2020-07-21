@@ -3,6 +3,7 @@ import avator from "../images/logo2.png";
 import "../App.css";
 import styled from "styled-components";
 import homeSet from "../images/homeSet.svg";
+import useWebAnimation from "@wellyshen/use-web-animations";
 
 const Nav = styled.nav`
   padding: 0 20px;
@@ -99,6 +100,19 @@ const OverlayMenu = styled.ul`
 `;
 
 export const Home = () => {
+  const { ref, playState } = useWebAnimation({
+    keyframes: {
+      transform: ["translateX(500px)"], // Move by 500px
+      transform: ["translateX(-100px)"], // Go through three colors
+    },
+    timing: {
+      delay: 500, // Start with a 500ms delay
+      duration: 1000, // Run for 1000ms
+      iterations: 2, // Repeat once
+      direction: "alternate", // Run the animation forwards and then backwards
+      easing: "ease-in-out", // Use a fancy timing function
+    },
+  });
   const [toggle, toggleNav] = useState(false);
   return (
     <div className="Home">
@@ -130,6 +144,7 @@ export const Home = () => {
             <Line open={toggle} />
           </NavIcon>
         </Nav>
+
         <Overlay open={toggle}>
           <OverlayMenu open={toggle}>
             <Item>
