@@ -205,23 +205,23 @@ nav {
 }
 .set {
   position: absolute;
-  animation-name: example;
+  /* animation-name: example;
   animation-fill-mode: forwards;
   animation-duration: 3s;
   animation-fill-mode: both;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
   width: 30%;
   margin-left: 10%;
-  margin-top: 16%;
+  margin-top: 1%;
 }
-@keyframes example {
+/* @keyframes example {
   from {
     top: 5px;
   }
   to {
     top: 0px;
   }
-}
+} */
 .HomeSet {
   width: 30%;
 }

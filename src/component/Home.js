@@ -101,14 +101,14 @@ const OverlayMenu = styled.ul`
 
 export const Home = () => {
   const { ref, playState } = useWebAnimation({
-    keyframes: {
-      transform: ["translateX(500px)"], // Move by 500px
-      transform: ["translateX(-100px)"], // Go through three colors
-    },
+    keyframes: [
+      { transform: "translateY(5px)" }, // Move by 500px
+      { transform: "translateY(-5px)" }, // Go through three colors
+    ],
     timing: {
       delay: 500, // Start with a 500ms delay
       duration: 1000, // Run for 1000ms
-      iterations: 2, // Repeat once
+      iterations: 5, // Repeat once
       direction: "alternate", // Run the animation forwards and then backwards
       easing: "ease-in-out", // Use a fancy timing function
     },
@@ -123,17 +123,17 @@ export const Home = () => {
           </Logo>
           <Menu>
             <Item>
-              <Link target="#" href="https://www.instagram.com/igor_dumencic/">
+              <Link target="#" href="">
                 Home
               </Link>
             </Item>
             <Item>
-              <Link target="#" href="https://www.behance.net/igordumencic">
+              <Link target="#" href="">
                 Service
               </Link>
             </Item>
             <Item>
-              <Link target="#" href="https://github.com/Igor178">
+              <Link target="#" href="https://github.com/bilalhadid">
                 Contact
               </Link>
             </Item>
@@ -176,7 +176,7 @@ export const Home = () => {
         </div>
 
         <div className="HomeSet">
-          <img className="set" src={homeSet} alt="G" />
+          <img className="set" src={homeSet} alt="G" ref={ref} />
         </div>
       </div>
     </div>
