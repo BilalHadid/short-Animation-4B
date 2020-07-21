@@ -37,10 +37,6 @@ const Item = styled.li``;
 const Link = styled.a`
   color: white;
   text-decoration: none;
-
-  :hover {
-    text-decoration: underline;
-  }
 `;
 
 const NavIcon = styled.button`
@@ -100,7 +96,7 @@ const OverlayMenu = styled.ul`
 `;
 
 export const Home = () => {
-  const { ref, playState } = useWebAnimation({
+  const { ref } = useWebAnimation({
     keyframes: [
       { transform: "translateY(5px)" }, // Move by 500px
       { transform: "translateY(-5px)" }, // Go through three colors

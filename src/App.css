@@ -38,7 +38,6 @@
 }
 .Logo {
   display: flex;
-  justify-content: start;
 }
 .Logo img {
   height: 15vh;
@@ -105,12 +104,10 @@ nav {
   display: flex;
   justify-content: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .texto {
     margin-left: 15%;
     margin-top: 10%;
-    display: flex;
-    justify-content: start;
   }
 }
 .texto {
